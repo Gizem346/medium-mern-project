@@ -35,7 +35,7 @@ const BigCard = (props) => {
         },
       }
     );
-    console.log(undoLikeData);
+    console.log(undoLikeData.data);
     setIsLike(false);
   }
 
@@ -49,7 +49,7 @@ const BigCard = (props) => {
         },
       }
     );
-    console.log(likeData);
+    console.log(likeData.data);
     setIsLike(true);
   }
 
