@@ -4,6 +4,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-left: 3vw;
+    /* border: 1px solid orangered; */
 
 }
 
@@ -13,7 +15,7 @@
 
 .position{
     position: fixed;
-   margin-top: 180px;
+   margin-top: 100px;
    display: flex;
    flex-direction: column;
     /* border: 5px  solid red; */
@@ -25,7 +27,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
     width: 100%;
 }
 
@@ -35,15 +37,32 @@
     padding-top: 10px;
 }
 
-.left-button {
+.left-button-following {
     border: 1px solid #1a8917;
-    color: #1a8917;
+    color: #f1f1f1;
     border-radius: 5px;
-    padding: 0px 20px;
-    background-color: white;
-    font-size: 15px;
-   
+    padding: 12px;
+    font-size: 14px;
+    text-align: center;
+    border: none;
+    background:#1a8917;
+    cursor: pointer;
+    outline: none;
 }
+
+.left-button-follow{
+    color: #1a8917;
+    background-color: white;
+    border: 1px solid  #1a8917 ;
+    padding: 12px;
+    font-size: 14px;
+    text-align: center;
+    align-items: flex-start;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+}
+
 .left-button-container {
     padding-top: 10px;
     padding-bottom: 30px;
@@ -59,8 +78,8 @@
 }
 .icons {
   /* border: 6px solid GOLD; */
-  padding-top: 10px;
-  padding-bottom: 20px;
+  padding-top: 8px;
+  padding-bottom: 15px;
   display: flex;
   flex-direction: row;
   /* border: 2px solid green; */
@@ -73,4 +92,20 @@
     padding-left: 10px;
 }
 
- 
+@media only screen and (max-width: 575px){
+    .line{
+        display:none
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .left-button-container {
+       width: 15%;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .icons-container {
+       display: none;
+    }
+}

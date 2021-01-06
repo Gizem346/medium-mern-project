@@ -1,12 +1,11 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import {useParams} from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import DetailSectionLeft from '../../components/detailSectionLeft/DetailSectionLeft';
 import DetailSectionMiddle from '../../components/detailSectionMiddle/DetailSectionMiddle';
 import DetailSectionRight from '../../components/detailSectionRight/DetailSectionRight';
-import { articleContent } from '../../data/articleData';
-
 import './ArticleDetails.css';
+import Footer from '../../components/footer/Footer';
 
 const ArticleDetails = () => {
     //console.log(articleContent);
@@ -24,31 +23,17 @@ const ArticleDetails = () => {
 
     return (
         <div className='articleDetailContainer'>
-            <DetailSectionLeft singleArticle = {singleArticle} />
-            <DetailSectionMiddle singleArticle = {singleArticle} />
-            <DetailSectionRight />
+            <div className='articleDetailContainerTop'>
+                <DetailSectionLeft singleArticleLeft={singleArticle} />
+                <DetailSectionMiddle singleArticle={singleArticle} />
+                <DetailSectionRight />
+            </div>
+            <div className='articleDetailContainerBottom'>
+                <Footer />
+            </div>
         </div>
 
     )
 }
 
 export default ArticleDetails;
-
-// const [userDetail, setUserDetail] = useState();
-
-// useEffect(() => {
-//   fetchData(`/user/${id}`)
-//     .then((res) => setUserDetail(res))
-//     .catch((err) => console.log(err))
-//     .finally();
-// }, [id]);
-
-// const history = useHistory();
-// const { id } = useParams();
-
-// const handlePostButtonClick = () => {
-//   history.push(`/user/${id}/post`);
-// };
-// const handleBackButtonClick = () => {
-//   history.push("/");
-// };
